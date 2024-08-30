@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header - Nokt Tech</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-blue-600 text-white">
+        <nav class="container mx-auto flex justify-between items-center p-4">
+            <!-- Logo / Brand -->
+            <a href="/views/home.html" class="text-2xl font-bold">Nokt Tech</a>
+            
+            <!-- Navbar Links -->
+            <div class="hidden md:flex space-x-6">
+                <a href="/views/home.html" class="hover:underline">Home</a>
+                <a href="/views/profil.html" class="hover:underline">Profil</a>
+                <a href="/views/program.html" class="hover:underline">Program</a>
+                <a href="/views/informasi.html" class="hover:underline">Informasi</a>
+                <a href="/views/berita.html" class="hover:underline">Berita</a>
+                <a href="/views/galeri.html" class="hover:underline">Galeri</a>
+                <a href="/views/kontak.html" class="hover:underline">Kontak</a>
+            </div>
+
+            <!-- Authentication Links -->
+            <div class="space-x-4">
+                <a href="/views/auth/login.html" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-200">Login</a>
+                <a href="/views/auth/register.html" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-200">Register</a>
+            </div>
+        </nav>
+    </header>
+</body>
+</html>

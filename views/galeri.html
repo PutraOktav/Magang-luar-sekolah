@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Nokt Tech</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Include Header -->
+    <div id="header"></div>
+
+    <!-- Konten utama -->
+    <main class="container mx-auto mt-10 px-4">
+        <h1 class="text-4xl font-bold text-center mb-10 text-blue-600">Galeri</h1>
+        
+        <!-- Video Galeri -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-semibold mb-6 text-gray-700">Video</h2>
+            <div class="relative">
+                <div class="slideshow-container">
+                    <div class="myVideoSlides fade">
+                        <video class="w-full h-64 object-cover" controls autoplay muted loop>
+                            <source src="../public/videos/video1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="myVideoSlides fade">
+                        <video class="w-full h-64 object-cover" controls autoplay muted loop>
+                            <source src="../public/videos/video2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="myVideoSlides fade">
+                        <video class="w-full h-64 object-cover" controls autoplay muted loop>
+                            <source src="../public/videos/video3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <a class="prev absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-700 text-white px-4 py-2 cursor-pointer" onclick="plusSlides(-1, 'video')">&#10094;</a>
+                <a class="next absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-700 text-white px-4 py-2 cursor-pointer" onclick="plusSlides(1, 'video')">&#10095;</a>
+            </div>
+        </section>
+
+        <!-- Foto Galeri -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-semibold mb-6 text-gray-700">Foto</h2>
+            <div class="relative">
+                <div class="slideshow-container">
+                    <div class="myPhotoSlides fade">
+                        <img src="../public/images/photo1.jpg" alt="Kegiatan 1" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="myPhotoSlides fade">
+                        <img src="../public/images/photo2.jpg" alt="Kegiatan 2" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="myPhotoSlides fade">
+                        <img src="../public/images/photo3.jpg" alt="Kegiatan 3" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="myPhotoSlides fade">
+                        <img src="../public/images/program1.jpg" alt="Kegiatan 1" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="myPhotoSlides fade">
+                        <img src="../public/images/program2.jpg" alt="Kegiatan 2" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="myPhotoSlides fade">
+                        <img src="../public/images/program3.jpg" alt="Kegiatan 3" class="w-full h-64 object-cover">
+                    </div>
+                </div>
+                <a class="prev absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-700 text-white px-4 py-2 cursor-pointer" onclick="plusSlides(-1, 'photo')">&#10094;</a>
+                <a class="next absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-700 text-white px-4 py-2 cursor-pointer" onclick="plusSlides(1, 'photo')">&#10095;</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer -->
+    <div id="footer"></div>
+
+    <script src="../../public/js/scripts.js"></script>
+    <script>
+        // Slide Show 
+        let videoSlideIndex = 1;
+        let photoSlideIndex = 1;
+        showSlides(videoSlideIndex, 'video');
+        showSlides(photoSlideIndex, 'photo');
+
+        function plusSlides(n, type) {
+            if (type === 'video') {
+                showSlides(videoSlideIndex += n, 'video');
+            } else if (type === 'photo') {
+                showSlides(photoSlideIndex += n, 'photo');
+            }
+        }
+
+        function showSlides(n, type) {
+            let i;
+            let slides;
+            if (type === 'video') {
+                slides = document.getElementsByClassName("myVideoSlides");
+                if (n > slides.length) {videoSlideIndex = 1}    
+                if (n < 1) {videoSlideIndex = slides.length}
+            } else if (type === 'photo') {
+                slides = document.getElementsByClassName("myPhotoSlides");
+                if (n > slides.length) {photoSlideIndex = 1}    
+                if (n < 1) {photoSlideIndex = slides.length}
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[type === 'video' ? videoSlideIndex-1 : photoSlideIndex-1].style.display = "block";  
+        }
+    </script>
+</body>
+</html>
