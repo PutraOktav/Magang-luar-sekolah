@@ -1,6 +1,6 @@
 # Version
-
-Magang Luar Sekolah (PBI)
+nokt.tech 
+Project Magang Luar Sekolah (PBI) 
 
 # Project Name
 
@@ -9,6 +9,6 @@ Welcome to the Project Name repository! This project is structured into differen
 ## Table of Contents
 
 - [Week 1 - HTML]
-- [Week 2 - CSS]
-- [Week 3 - JavaScript]
-- [Week 4 - Web Lembaga Sederhana]
+- [Week 2 - Add CSS]
+- [Week 3 - Add JavaScript]
+- [Week 4 - Make Web Lembaga Sederhana]
