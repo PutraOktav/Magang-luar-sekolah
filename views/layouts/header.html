@@ -7,29 +7,42 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         body {
-          background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
-          background-size: 400% 400%;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+            height: 100vh;
+        }
+        .news {
+            height: 200vh;
         }
       </style>
 </head>
 <body>
-    <header class="bg-blue-600 text-white">
+    <header class="bg-gradient-to-r from-black via-[#1e3a8a] to-[#2563eb] text-white">
         <nav class="container mx-auto flex justify-between items-center p-4">
             <!-- Logo / Brand -->
-            <a href="/views/home.html" class="text-2xl font-bold">Nokt Tech</a>
+            <a href="/views/home.html" class="flex items-center">
+                <img src="/public/images/logo.png" alt="Logo Nokt Tech" class="h-8 w-auto">
+                <span class="text-2xl font-bold ml-2">Nokt Tech</span>
+            </a>
             
             <!-- Navbar Links -->
             <div class="hidden md:flex space-x-6">
                 <a href="/views/home.html" class="hover:underline">Home</a>
                 <a href="/views/profil.html" class="hover:underline">Profil</a>
+                <a href="/views/karir.html" class="hover:underline">Karir</a>
                 <a href="/views/program.html" class="hover:underline">Program</a>
                 <a href="/views/informasi.html" class="hover:underline">Informasi</a>
                 <a href="/views/berita.html" class="hover:underline">Berita</a>
                 <a href="/views/galeri.html" class="hover:underline">Galeri</a>
                 <a href="/views/kontak.html" class="hover:underline">Kontak</a>
-                <a href="/views/karir.html" class="hover:underline">Karir</a>
             </div>
 
+            <!-- Search Box -->
+            <form class="hidden md:flex items-center" action="" method="GET">
+                <label for="search" class="sr-only">Cari</label>
+                <input type="text" name="search" id="search" class="bg-white rounded-md px-3 py-2 w-64" placeholder="Cari konten">
+                <button type="submit" class="bg-blue-600 px-3 py-2 rounded-md ">Cari</button>
+            </form>
+            
             <!-- Authentication Links -->
             <div id="authLinks" class="space-x-4">
                 <a href="/views/auth/login.html" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-200">Login</a>
