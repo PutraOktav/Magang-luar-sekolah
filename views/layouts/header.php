@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header - Nokt Tech</title>
-    <link rel="shortcut icon" href="../../public/images/logo/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../public/images/logo/logo.png" type="image/x-icon">
     
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
@@ -21,21 +21,21 @@
     <header class="bg-gradient-to-r from-black via-[#1e3a8a] to-[#2563eb] text-white">
         <nav class="container mx-auto flex justify-between items-center p-4">
             <!-- Logo / Brand -->
-            <a href="/views/home.html" class="flex items-center">
-                <img src="/public/images/logo/logo.png" alt="Logo Nokt Tech" class="h-8 w-auto">
+            <a href="../views/index.php" class="flex items-center">
+                <img src="../public/images/logo/logo.png" alt="Logo Nokt Tech" class="h-8 w-auto">
                 <span class="text-2xl font-bold ml-2">Nokt Tech</span>
             </a>
             
             <!-- Navbar Links -->
             <div class="hidden md:flex space-x-6">
-                <a href="/views/home.html" class="hover:underline">Home</a>
-                <a href="/views/profil.html" class="hover:underline">Profil</a>
-                <a href="/views/karir.html" class="hover:underline">Karir</a>
-                <a href="/views/program.html" class="hover:underline">Program</a>
-                <a href="/views/informasi.html" class="hover:underline">Informasi</a>
-                <a href="/views/berita.html" class="hover:underline">Berita</a>
-                <a href="/views/galeri.html" class="hover:underline">Galeri</a>
-                <a href="/views/kontak.html" class="hover:underline">Kontak</a>
+                <a href="../views/index.php" class="hover:underline">Home</a>
+                <a href="../views/profil.php" class="hover:underline">Profil</a>
+                <a href="../views/karir.php" class="hover:underline">Karir</a>
+                <a href="../views/program.php" class="hover:underline">Program</a>
+                <a href="../views/informasi.php" class="hover:underline">Informasi</a>
+                <a href="../views/berita.php" class="hover:underline">Berita</a>
+                <a href="../views/galeri.php" class="hover:underline">Galeri</a>
+                <a href="../views/kontak.php" class="hover:underline">Kontak</a>
             </div>
 
             <!-- Search Box -->
@@ -49,8 +49,8 @@
             
             <!-- Authentication Links -->
             <div id="authLinks" class="space-x-4">
-                <a href="/views/auth/login.html" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-200">Login</a>
-                <a href="/views/auth/register.html" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-200">Register</a>
+                <a href="../views/auth/login.php" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-200">Login</a>
+                <a href="../views/auth/register.php" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-200">Register</a>
             </div>
         </nav>
     </header>

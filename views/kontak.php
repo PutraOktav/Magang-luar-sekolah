@@ -5,13 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kontak - Nokt Tech</title>
-  <link rel="shortcut icon" href="../../public/images/logo/logo.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../public/images/logo/logo.png" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 </head>
 
 <body>
   <!-- Include Header -->
-  <div id="header"></div>
+  <?php include_once('../views/layouts/header.php'); ?>
 
   <!-- Konten utama -->
   <main class="mt-10">
@@ -57,8 +57,9 @@
         </div>
     </section>
 </main>
-  <!-- Include Footer -->
-  <div id="footer"></div>
+
+    <!-- Include Footer -->
+    <?php include_once('../views/layouts/footer.php'); ?>
 
   <script src="../../public/js/scripts.js"></script>
 </body>

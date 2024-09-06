@@ -92,7 +92,7 @@
                     <input type="password" id="password" name="password" class="w-full p-3 rounded-lg" required>
                 </div>
                 <button type="submit" class="w-full py-3 rounded-lg bg-blue-600 hover:bg-blue-700">Login</button>
-                <p class="text-center text-gray-600 mt-4">Belum punya akun? <a href="/views/auth/register.html" class="hover:underline">Daftar disini</a></p>
+                <p class="text-center text-gray-600 mt-4">Belum punya akun? <a href="register.php" class="hover:underline">Daftar disini</a></p>
             </form>
         </section>
     </main>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profil - Nokt Tech</title>
-    <link rel="shortcut icon" href="../../public/images/logo/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../public/images/logo/logo.png" type="image/x-icon">
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
@@ -18,7 +18,7 @@
   </head>
   <body>
     <!-- Include Header -->
-    <div id="header"></div>
+    <?php include_once('../views/layouts/header.php'); ?>
 
     <!-- Konten utama -->
     <main class="mt-20">
@@ -57,24 +57,24 @@
           <h2 class="text-3xl font-semibold mb-4">Team</h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-gray-200 p-4 rounded-lg hover:shadow-lg">
-              <img src="../../public/images/team/team.jpg" class="rounded-lg w-full h-48 object-cover" alt="Tim 1">
+              <img src="../public/images/team/team-1.jpeg" class="rounded-lg w-full h-48 object-cover" alt="Tim 1">
               <div class="flex items-center justify-center mt-4">
-                <h3 class="text-lg font-semibold">Putra</h3>
-                <p class="text-gray-600 text-sm">(Web Developer)</p>
+                <h3 class="text-lg font-semibold">Freya J</h3>
+                <p class="text-gray-600 text-sm">( Web Developer )</p>
               </div>
             </div>
             <div class="bg-gray-200 p-4 rounded-lg hover:shadow-lg">
-              <img src="../../public/images/team/team.jpg" class="rounded-lg w-full h-48 object-cover" alt="Tim 2">
+              <img src="../public/images/team/team-2.jpg" class="rounded-lg w-full h-48 object-cover" alt="Tim 2">
               <div class="flex items-center justify-center mt-4">
-                <h3 class="text-lg font-semibold">Winly </h3>
-                <p class="text-gray-600 text-sm">(UI/UX Designer)</p>
+                <h3 class="text-lg font-semibold">IU </h3>
+                <p class="text-gray-600 text-sm">( UI/UX Designer )</p>
               </div>
             </div>
             <div class="bg-gray-200 p-4 rounded-lg hover:shadow-lg">
-              <img src="../../public/images/team/team.jpg" class="rounded-lg w-full h-48 object-cover" alt="Tim 3">
+              <img src="../public/images/team/team-3.jpg" class="rounded-lg w-full h-48 object-cover" alt="Tim 3">
               <div class="flex items-center justify-center mt-4">
-                <h3 class="text-lg font-semibold">Octavianto</h3>
-                <p class="text-gray-600 text-sm">(Manager)</p>
+                <h3 class="text-lg font-semibold">Park Jihyo</h3>
+                <p class="text-gray-600 text-sm">( Manager )</p>
               </div>
             </div>
           </div>
@@ -83,7 +83,7 @@
     </main>
 
     <!-- Include Footer -->
-    <div id="footer"></div>
+    <?php include_once('../views/layouts/footer.php'); ?>
 
     <script src="../../public/js/scripts.js"></script>
   </body>
