@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header - Nokt Tech</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+          background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+          background-size: 400% 400%;
+        }
+      </style>
 </head>
 <body>
     <header class="bg-blue-600 text-white">
@@ -21,10 +27,11 @@
                 <a href="/views/berita.html" class="hover:underline">Berita</a>
                 <a href="/views/galeri.html" class="hover:underline">Galeri</a>
                 <a href="/views/kontak.html" class="hover:underline">Kontak</a>
+                <a href="/views/karir.html" class="hover:underline">Karir</a>
             </div>
 
             <!-- Authentication Links -->
-            <div class="space-x-4">
+            <div id="authLinks" class="space-x-4">
                 <a href="/views/auth/login.html" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-200">Login</a>
                 <a href="/views/auth/register.html" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-200">Register</a>
             </div>

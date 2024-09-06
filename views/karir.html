@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karir - Nokt Tech</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Include Header -->
+    <div id="header"></div>
+
+    <!-- Konten utama -->
+    <main class="mt-10">
+      <h1 class="text-4xl font-bold text-center mb-6 text-white">Karir</h1>
+
+      <!-- Filter Karir -->
+      <div class="container mx-auto px-4 mb-6">
+        <input
+          type="text"
+          id="jobFilter"
+          class="w-full p-3 rounded-lg shadow-lg"
+          placeholder="Cari karir..."
+        />
+      </div>
+
+      <section class="container mx-auto px-4">
+        <div id="jobContainer" class="bg-gray-100 p-6 rounded-lg shadow-lg">
+          <h2 class="text-3xl font-semibold mb-4">Karir Terkini</h2>
+
+          <!-- Artikel Karir -->
+          <article class="job-item mb-6">
+            <h3 class="text-2xl font-semibold mb-2">
+              Software Engineer
+            </h3>
+            <p class="text-gray-700 mb-2">
+              Kami sedang mencari Software Engineer yang berpengalaman dan
+              memiliki kemampuan yang baik dalam mengembangkan aplikasi web dan
+              mobile.
+            </p>
+            <a href="#" class="text-blue-500 hover:underline"
+              >Baca selengkapnya</a
+            >
+          </article>
+
+          <article class="job-item mb-6">
+            <h3 class="text-2xl font-semibold mb-2">
+              UI/UX Designer
+            </h3>
+            <p class="text-gray-700 mb-2">
+              Kami sedang mencari UI/UX Designer yang berpengalaman dan
+              memiliki kemampuan yang baik dalam mendesain antarmuka yang
+              menarik dan mudah digunakan.
+            </p>
+            <a href="#" class="text-blue-500 hover:underline"
+              >Baca selengkapnya</a
+            >
+          </article>
+
+          <article class="job-item mb-6">
+            <h3 class="text-2xl font-semibold mb-2">
+              IT Support
+            </h3>
+            <p class="text-gray-700 mb-2">
+              Kami sedang mencari IT Support yang berpengalaman dan memiliki
+              kemampuan yang baik dalam memberikan dukungan teknis kepada
+              pelanggan.
+            </p>
+            <a href="#" class="text-blue-500 hover:underline"
+              >Baca selengkapnya</a
+            >
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Include Footer -->
+    <div id="footer"></div>
+
+    <script src="../../public/js/scripts.js"></script>
+  </body>
+</html>
