@@ -1,6 +1,6 @@
 # Version
 Project Magang Luar Sekolah (PBI) <br>
-Hosting ( https://magangluarsekolah.nokt.tech ) <br>
+Hosting ( https://magang.nokt.tech ) <br>
 nokt.tech ( https://github.com/PutraOktav )
 
 # Project Name
