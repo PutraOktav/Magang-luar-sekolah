@@ -1,5 +1,5 @@
 # Version
-nokt.tech 
+nokt.tech ( https://github.com/PutraOktav ) 
 Project Magang Luar Sekolah (PBI) 
 
 # Project Name
