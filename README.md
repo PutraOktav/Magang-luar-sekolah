@@ -4,6 +4,7 @@ Welcome to the Project Name repository! This project is structured into differen
 
 ## Table of Contents
 
-- [Week 1 - HTML](#week-1-html)
-- [Week 2 - CSS](#week-2-css)
-- [Week 3 - JavaScript](#week-3-javascript)
+- [Week 1 - HTML]
+- [Week 2 - CSS]
+- [Week 3 - JavaScript]
+- [Week 4 - Web Lembaga Sederhana]
