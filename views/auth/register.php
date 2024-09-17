@@ -71,32 +71,6 @@
                 transform: translateY(0);
             }
         }
-
-        #identityCard {
-            display: none;
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            animation: fadeInCard 1.2s ease;
-        }
-
-        @keyframes fadeInCard {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        #identityCard img {
-            border-radius: 12px;
-            object-fit: cover;
-            max-height: 150px;
-            margin-top: 1rem;
-        }
     </style>
 </head>
 <body>
@@ -104,7 +78,7 @@
 <main>
     <section id="registerSection" class="bg-white p-6 rounded-lg shadow-lg mt-10 register-box">
         <h2 class="text-3xl font-semibold mb-4">Data Diri</h2>
-        <form id="registerForm2" class="space-y-6">
+        <form action="process_register.php" method="POST" enctype="multipart/form-data" class="space-y-6">
             <div>
                 <label for="fullName" class="block text-gray-700">Nama Lengkap</label>
                 <input type="text" id="fullName" name="fullName" class="w-full p-3 rounded-lg" required>
@@ -149,76 +123,6 @@
             <p class="text-center">Sudah punya akun? <a href="login.php" class="text-blue-600 font-semibold">Login</a></p>
         </form>
     </section>
-    <section>
-        <div id="identityCard"></div>
-    </section>
 </main>
-
-<script>
-    const registerForm2 = document.getElementById('registerForm2');
-    const identityCard = document.getElementById('identityCard');
-    const registerSection = document.getElementById('registerSection');
-
-    registerForm2.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const formData = new FormData(registerForm2);
-        const fullName = formData.get('fullName');
-        const jenisKelamin = formData.get('jenisKelamin');
-        const tempatLahir = formData.get('tempatLahir');
-        const tanggalLahir = formData.get('tanggalLahir');
-        const alamat = formData.get('alamat');
-        const email = formData.get('email');
-        const noHp = formData.get('noHp');
-        const hobi = formData.get('hobi');
-        const fotoDiri = formData.get('fotoDiri');
-
-        const bgColor = jenisKelamin === 'Laki-laki' ? 'bg-blue-500 text-black' : 'bg-red-500 text-white';
-
-        const card = `
-            <div class="${bgColor} p-6 rounded-lg shadow-lg">
-                <h3 class="text-2xl font-semibold mb-4">${fullName}</h3>
-                <table class="w-full">
-                    <tbody>
-                        <tr>
-                            <th class="px-4 py-2 text-left">Jenis Kelamin</th>
-                            <td class="px-4 py-2">: ${jenisKelamin}</td>
-                        </tr>
-                        <tr>
-                            <th class="px-4 py-2 text-left">Tempat Lahir</th>
-                            <td class="px-4 py-2">: ${tempatLahir}</td>
-                        </tr>
-                        <tr>
-                            <th class="px-4 py-2 text-left">Tanggal Lahir</th>
-                            <td class="px-4 py-2">: ${tanggalLahir}</td>
-                        </tr>
-                        <tr>
-                            <th class="px-4 py-2 text-left">Alamat</th>
-                            <td class="px-4 py-2">: ${alamat}</td>
-                        </tr>
-                        <tr>
-                            <th class="px-4 py-2 text-left">Email</th>
-                            <td class="px-4 py-2">: ${email}</td>
-                        </tr>
-                        <tr>
-                            <th class="px-4 py-2 text-left">No HP</th>
-                            <td class="px-4 py-2">: ${noHp}</td>
-                        </tr>
-                        <tr>
-                            <th class="px-4 py-2 text-left">Hobi</th>
-                            <td class="px-4 py-2">: ${hobi}</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <img src="${URL.createObjectURL(fotoDiri)}" alt="Foto Diri" class="mt-4 rounded-lg max-w-full h-auto">
-            </div>
-        `;
-
-        identityCard.innerHTML = card;
-        identityCard.style.display = 'block';
-        registerSection.style.display = 'none';
-    });
-</script>
-
 </body>
 </html>
