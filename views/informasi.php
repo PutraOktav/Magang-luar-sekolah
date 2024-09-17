@@ -18,7 +18,7 @@
     <main class="mt-10">
       <h1 class="text-4xl font-bold text-center mb-6 text-white">Informasi Terbaru dari Nokt Tech</h1>
       <section class="container mx-auto px-4">
-          <div class="bg-white p-6 rounded-lg shadow-lg">
+          <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
               <h2 class="text-3xl font-semibold mb-4">Terus Meningkatkan Kualitas</h2>
               <p class="text-gray-700 mb-4">
                   Kami di Nokt Tech berkomitmen untuk terus meningkatkan kualitas layanan dan produk kami. Kami memperbarui informasi kami secara teratur untuk memastikan Anda selalu mendapatkan berita terkini tentang kegiatan dan pengumuman kami.
@@ -44,6 +44,42 @@
                   </li>
               </ul>
           </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+              <h2 class="text-3xl font-semibold mb-4">Teknologi dan Inovasi</h2>
+              <p class="text-gray-700 mb-4">
+                  Inovasi adalah inti dari semua yang kami lakukan. Kami terus berinvestasi dalam penelitian dan pengembangan untuk memberikan solusi teknologi yang canggih.
+              </p>
+              <ul class="list-disc pl-5">
+                  <li class="mb-2">
+                      <strong>Pengembangan AI:</strong> Tim riset kami bekerja pada pengembangan algoritma AI terbaru untuk aplikasi bisnis.
+                  </li>
+                  <li class="mb-2">
+                      <strong>IoT dan Automasi:</strong> Kami sedang mengembangkan sistem IoT yang inovatif untuk mengotomatisasi proses bisnis.
+                  </li>
+                  <li class="mb-2">
+                      <strong>Keamanan Siber:</strong> Memastikan keamanan data Anda tetap menjadi prioritas utama kami, dengan solusi keamanan siber terbaru.
+                  </li>
+              </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+              <h2 class="text-3xl font-semibold mb-4">Karir dan Kesempatan</h2>
+              <p class="text-gray-700 mb-4">
+                  Bergabunglah dengan tim kami dan jadilah bagian dari inovasi teknologi masa depan. Kami selalu mencari talenta baru yang berdedikasi.
+              </p>
+              <ul class="list-disc pl-5">
+                  <li class="mb-2">
+                      <strong>Lowongan Terbaru:</strong> Lihat posisi-posisi yang sedang kami buka dan kirimkan lamaran Anda.
+                  </li>
+                  <li class="mb-2">
+                      <strong>Program Magang:</strong> Kami menawarkan program magang untuk mahasiswa yang ingin mendapatkan pengalaman kerja nyata.
+                  </li>
+                  <li class="mb-2">
+                      <strong>Pengembangan Karir:</strong> Kami berkomitmen untuk pengembangan karir karyawan melalui pelatihan dan mentorship.
+                  </li>
+              </ul>
+          </div>
       </section>
   </main>
 
@@ -53,4 +89,3 @@
     <script src="../../public/js/scripts.js"></script>
   </body>
 </html>
-
