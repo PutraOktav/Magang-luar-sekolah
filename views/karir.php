@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Karir - Nokt Tech</title>
     <link rel="shortcut icon" href="../public/images/logo/logo.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-    <style>
-        body {
-            background-color: #f7fafc; /* Light gray background */
-        }
-    </style>
 </head>
+
 <body>
     <!-- Include Header -->
     <?php include_once('../views/layouts/header.php'); ?>
@@ -19,11 +12,6 @@
     <!-- Konten utama -->
     <main class="mt-10">
         <h1 class="text-4xl font-bold text-center mb-6 text-white">Karir</h1>
-
-        <!-- Filter Karir -->
-        <div class="container mx-auto px-4 mb-6">
-            <input type="text" id="jobFilter" class="w-full p-3 rounded-lg shadow-lg" placeholder="Cari karir..." />
-        </div>
 
         <section class="container mx-auto px-4">
             <div id="jobContainer" class="bg-white p-6 rounded-lg shadow-lg">
@@ -64,7 +52,6 @@
     <?php include_once('../views/layouts/footer.php'); ?>
 
 
-<script src="../../public/js/scripts.js"></script>
     <script>
         function toggleJobDescription(id) {
             const description = document.getElementById(id);
@@ -72,4 +59,3 @@
         }
     </script>
 </body>
-</html>

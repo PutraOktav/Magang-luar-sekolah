@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Nokt Tech</title>
     <link rel="shortcut icon" href="../public/images/logo/logo.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
+
 <body>
 
     <!-- Include Header -->
@@ -30,28 +26,37 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="bg-gray-200 p-6 rounded-lg shadow-lg hover:bg-gray-300 transition">
                     <div class="flex items-center justify-center mb-4">
-                        <svg class="h-10 w-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1.245M15.665 8.485a1.23 1.23 0 011.668-.245l3.522 3.52a1.23 1.23 0 01-1.669 1.245V14a1 1 0 01-1 1h-2a1 1 0 01-1-1V6.414a1 1 0 011-1H4.89a1 1 0 01-1.668-.245l-3.522-3.52a1.23 1.23 0 011.669-1.245V3a1 1 0 011 1h2a1 1 0 011 1V10.59"></path></svg>
+                        <svg class="h-10 w-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1.245M15.665 8.485a1.23 1.23 0 011.668-.245l3.522 3.52a1.23 1.23 0 01-1.669 1.245V14a1 1 0 01-1 1h-2a1 1 0 01-1-1V6.414a1 1 0 011-1H4.89a1 1 0 01-1.668-.245l-3.522-3.52a1.23 1.23 0 011.669-1.245V3a1 1 0 011 1h2a1 1 0 011 1V10.59"></path>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Web Development</h3>
                     <p class="text-gray-600">Kami membangun solusi web yang modern, responsif, dan cepat untuk kebutuhan bisnis Anda.</p>
                 </div>
                 <div class="bg-gray-200 p-6 rounded-lg shadow-lg hover:bg-gray-300 transition">
                     <div class="flex items-center justify-center mb-4">
-                        <svg class="h-10 w-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01"></path><path d="M8 21a6 6 0 00-6-6V5a6 6 0 016 6v10a6 6 0 00-6 6h3"></path></svg>
+                        <svg class="h-10 w-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01"></path>
+                            <path d="M8 21a6 6 0 00-6-6V5a6 6 0 016 6v10a6 6 0 00-6 6h3"></path>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Mobile App Development</h3>
                     <p class="text-gray-600">Kami mengembangkan aplikasi mobile yang intuitif dan mudah digunakan untuk berbagai platform.</p>
                 </div>
                 <div class="bg-gray-200 p-6 rounded-lg shadow-lg hover:bg-gray-300 transition">
                     <div class="flex items-center justify-center mb-4">
-                        <svg class="h-10 w-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2.828V7H7.172V5H5v12h12v-2z"></path></svg>
+                        <svg class="h-10 w-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2.828V7H7.172V5H5v12h12v-2z"></path>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">IT Consulting</h3>
                     <p class="text-gray-600">Kami memberikan konsultasi teknologi untuk membantu Anda merumuskan strategi IT yang tepat.</p>
                 </div>
                 <div class="bg-gray-200 p-6 rounded-lg shadow-lg hover:bg-gray-300 transition">
                     <div class="flex items-center justify-center mb-4">
-                        <svg class="h-10 w-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m0 4.87V19l3.75 3.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <svg class="h-10 w-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m0 4.87V19l3.75 3.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Cyber Security</h3>
                     <p class="text-gray-600">Kami menyediakan layanan keamanan siber untuk melindungi aset digital Anda dari ancaman.</p>
@@ -65,6 +70,4 @@
 
     <!-- Include Scripts -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script src="../public/js/scripts.js"></script>
 </body>
-</html>

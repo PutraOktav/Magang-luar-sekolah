@@ -5,75 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - Nokt Tech</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        body {
-            background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .register-box {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            max-width: 500px;
-            width: 100%;
-            animation: fadeIn 1s ease;
-        }
-
-        .register-box input {
-            background-color: rgba(255, 255, 255, 0.7);
-            border: none;
-            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .register-box input:focus {
-            background-color: rgba(255, 255, 255, 1);
-            box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
-            outline: none;
-        }
-
-        button {
-            background-color: #1d4ed8;
-            color: white;
-            font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #2563eb;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3);
-        }
-
-        a {
-            color: #2563eb;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #1e40af;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../../public/styles/style.css">
 </head>
-<body>
+<body id="register-page">
 
 <main>
     <section id="registerSection" class="bg-white p-6 rounded-lg shadow-lg mt-10 register-box">

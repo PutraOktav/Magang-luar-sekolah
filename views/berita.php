@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Berita - Nokt Tech</title>
     <link rel="shortcut icon" href="../public/images/logo/logo.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-    <style>
-        body {
-            background-color: #f7fafc; /* Light gray background */
-        }
-    </style>
 </head>
 
 <body>
@@ -117,28 +106,5 @@
     <!-- Include Footer -->
     <?php include_once('../views/layouts/footer.php'); ?>
 
-    <script src="../../public/js/scripts.js"></script>
-
-    <!-- JavaScript untuk filter berita -->
-    <script>
-        document.getElementById('newsFilter').addEventListener('change', function () {
-            const selectedCategory = this.value;
-            const newsItems = document.querySelectorAll('.news-item');
-
-            newsItems.forEach(function (item) {
-                if (selectedCategory === 'all' || item.getAttribute('data-category') === selectedCategory) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
-
-        function toggleDetails(detailsId) {
-            const detailsElement = document.getElementById(detailsId);
-            detailsElement.classList.toggle('hidden');
-        }
-    </script>
+    <script src="../public/js/scripts.js"></script>
 </body>
-
-</html>
