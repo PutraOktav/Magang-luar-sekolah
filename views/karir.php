@@ -16,46 +16,38 @@
         <section class="container mx-auto px-4">
             <div id="jobContainer" class="bg-white p-6 rounded-lg shadow-lg">
                 <h2 class="text-3xl font-semibold mb-4 text-gray-800">Karir Terkini</h2>
+                <?php
+                include_once('../config/conn.php');
 
-                <!-- Artikel Karir -->
-                <article class="job-item mb-6 p-4 border rounded-lg shadow hover:shadow-lg transition duration-300">
-                    <h3 class="text-2xl font-semibold mb-2">Software Engineer</h3>
-                    <p class="text-gray-700 mb-2">Kami sedang mencari Software Engineer yang berpengalaman dan memiliki kemampuan yang baik dalam mengembangkan aplikasi web dan mobile.</p>
-                    <p class="text-gray-700 hidden job-description" id="softwareEngineerDescription">
-                        Keterangan lebih lanjut tentang karir ini adalah sebagai berikut: Kami sedang mencari Software Engineer yang berpengalaman dan memiliki kemampuan yang baik dalam mengembangkan aplikasi web dan mobile. Kandidat yang kami cari harus memiliki kemampuan yang baik dalam mengembangkan aplikasi yang scalable, reliable, dan maintainable. Kandidat juga harus memiliki kemampuan yang baik dalam mengkomunikasikan ide-ide dan hasil kerja kepada tim.
-                    </p>
-                    <button class="text-blue-500 underline hover:text-blue-700 transition duration-300" onclick="toggleJobDescription('softwareEngineerDescription')">Baca selengkapnya</button>
-                </article>
+                $sql = "SELECT * FROM karir";
+                $result = $conn->query($sql);
 
-                <article class="job-item mb-6 p-4 border rounded-lg shadow hover:shadow-lg transition duration-300">
-                    <h3 class="text-2xl font-semibold mb-2">UI/UX Designer</h3>
-                    <p class="text-gray-700 mb-2">Kami sedang mencari UI/UX Designer yang berpengalaman dan memiliki kemampuan yang baik dalam mendesain antarmuka yang menarik dan mudah digunakan.</p>
-                    <p class="text-gray-700 hidden job-description" id="uiuxDesignerDescription">
-                        Keterangan lebih lanjut tentang karir ini adalah sebagai berikut: Kami sedang mencari UI/UX Designer yang berpengalaman dan memiliki kemampuan yang baik dalam mendesain antarmuka yang menarik dan mudah digunakan. Kandidat yang kami cari harus memiliki kemampuan yang baik dalam mendesain antarmuka yang scalable, reliable, dan maintainable. Kandidat juga harus memiliki kemampuan yang baik dalam mengkomunikasikan ide-ide dan hasil kerja kepada tim.
-                    </p>
-                    <button class="text-blue-500 underline hover:text-blue-700 transition duration-300" onclick="toggleJobDescription('uiuxDesignerDescription')">Baca selengkapnya</button>
-                </article>
+                if ($result->num_rows > 0) {
+                    echo '<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">';
 
-                <article class="job-item mb-6 p-4 border rounded-lg shadow hover:shadow-lg transition duration-300">
-                    <h3 class="text-2xl font-semibold mb-2">IT Support</h3>
-                    <p class="text-gray-700 mb-2">Kami sedang mencari IT Support yang berpengalaman dan memiliki kemampuan yang baik dalam memberikan dukungan teknis kepada pelanggan.</p>
-                    <p class="text-gray-700 hidden job-description" id="itSupportDescription">
-                        Keterangan lebih lanjut tentang karir ini adalah sebagai berikut: Kami sedang mencari IT Support yang berpengalaman dan memiliki kemampuan yang baik dalam memberikan dukungan teknis kepada pelanggan. Kandidat yang kami cari harus memiliki kemampuan yang baik dalam memberikan dukungan teknis kepada pelanggan. Kandidat juga harus memiliki kemampuan yang baik dalam mengkomunikasikan ide-ide dan hasil kerja kepada tim.
-                    </p>
-                    <button class="text-blue-500 underline hover:text-blue-700 transition duration-300" onclick="toggleJobDescription('itSupportDescription')">Baca selengkapnya</button>
-                </article>
+                    while ($row = $result->fetch_assoc()) {
+                ?>
+                        <!-- Artikel Karir -->
+                        <article class="job-item mb-6 p-4 border rounded-lg shadow hover:shadow-lg transition duration-300 flex flex-col">
+                            <h3 class="text-2xl font-semibold mb-2"><?php echo $row['nama_karir']; ?></h3>
+                            <p class="text-gray-700 mb-2"><?php echo $row['deskripsi_karir']; ?></p>
+                            <p class="text-gray-700 hidden job-description" id="desc-<?php echo $row['id_karir']; ?>"><?php echo $row['selengkapnya']; ?></p>
+                            <button class="text-blue-500 underline hover:text-blue-700 transition duration-300 self-end" onclick="toggleDetails('desc-<?php echo $row['id_karir']; ?>', this)">Baca selengkapnya</button>
+                        </article>
+                <?php
+                    }
+                    echo '</div>';
+                } else {
+                    echo '<p class="text-gray-700">Tidak ada karir yang tersedia saat ini.</p>';
+                }
+                ?>
             </div>
         </section>
+
     </main>
 
     <!-- Include Footer -->
     <?php include_once('../views/layouts/footer.php'); ?>
 
-
-    <script>
-        function toggleJobDescription(id) {
-            const description = document.getElementById(id);
-            description.classList.toggle('hidden');
-        }
-    </script>
+    <script src="../public/js/scripts.js"></script>
 </body>
