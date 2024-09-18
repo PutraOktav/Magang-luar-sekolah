@@ -2,7 +2,7 @@
 session_start();
 $isLoggedIn = isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'];
 
-// include_once('../../config/conn.php');
+include_once('../config/conn.php');
 ?>
 
 
@@ -28,14 +28,14 @@ $isLoggedIn = isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'];
 <header class="bg-gradient-to-r from-black via-[#1e3a8a] to-[#2563eb] text-white">
     <nav class="container mx-auto flex justify-between items-center p-4">
         <!-- Logo / Brand -->
-        <a href="../views/index.php" class="flex items-center">
+        <a href="../views/home.php" class="flex items-center">
             <img src="../public/images/logo/logo.png" alt="Logo Nokt Tech" class="h-8 w-auto">
             <span class="text-2xl font-bold ml-2">Nokt Tech</span>
         </a>
 
         <!-- Navbar Links -->
         <div class="hidden md:flex space-x-6">
-            <a href="../views/index.php" class="hover:underline">Home</a>
+            <a href="../views/home.php" class="hover:underline">Home</a>
             <a href="../views/profil.php" class="hover:underline">Profil</a>
             <a href="../views/karir.php" class="hover:underline">Karir</a>
             <a href="../views/program.php" class="hover:underline">Program</a>

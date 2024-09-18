@@ -16,7 +16,7 @@ if ($username === $valid_username && $password === $valid_password) {
     $_SESSION['username'] = $username;
 
     // Redirect ke halaman index
-    header('Location: ../index.php');
+    header('Location: ../home.php');
     exit();
 } else {
     // Login gagal, redirect ke login dengan pesan error

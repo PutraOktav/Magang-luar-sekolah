@@ -16,7 +16,6 @@
             <select id="newsFilter" class="w-full p-3 rounded-lg shadow-lg">
                 <option value="all">Semua Berita</option>
                 <?php
-                include_once('../config/conn.php');
                 $sql = "SELECT judul_berita FROM berita";
                 $category = $conn->query($sql);
 

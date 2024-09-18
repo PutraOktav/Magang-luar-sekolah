@@ -31,8 +31,6 @@
 
       <!-- Daftar Program Pelatihan -->
       <?php
-      include_once('../config/conn.php');
-
       $sql = "SELECT * FROM program";
       $result = $conn->query($sql);
 

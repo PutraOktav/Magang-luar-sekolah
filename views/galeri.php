@@ -15,8 +15,6 @@
         <!-- Video Galeri -->
 
         <?php
-        include_once('../config/conn.php');
-
         $sql = "SELECT * FROM galeri where category = 'foto'";
         $result = $conn->query($sql);
 

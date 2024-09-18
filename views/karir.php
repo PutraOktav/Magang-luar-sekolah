@@ -17,8 +17,6 @@
             <div id="jobContainer" class="bg-white p-6 rounded-lg shadow-lg">
                 <h2 class="text-3xl font-semibold mb-4 text-gray-800">Karir Terkini</h2>
                 <?php
-                include_once('../config/conn.php');
-
                 $sql = "SELECT * FROM karir";
                 $result = $conn->query($sql);
 
