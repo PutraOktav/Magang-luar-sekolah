@@ -30,94 +30,48 @@
       </div>
 
       <!-- Daftar Program Pelatihan -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Program 1 -->
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition">
-          <img
-            src="../public/images/program/program1.jpg"
-            alt="Pengembangan Perangkat Lunak"
-            class="w-full h-48 object-cover" />
-          <div class="p-4">
-            <h3 class="text-xl font-semibold mb-2">Pengembangan Perangkat Lunak</h3>
-            <p class="text-gray-600 mb-4">
-              Pelatihan ini dirancang untuk mengajarkan Anda cara mengembangkan perangkat lunak yang efisien dan scalable.
-            </p>
-            <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 mb-4" onclick="toggleDetails('program1Details')">Lihat Detail</button>
-            <div id="program1Details" class="hidden">
-              <h4 class="text-lg font-semibold mb-2">Kurikulum</h4>
-              <ul class="list-disc pl-5 mb-4">
-                <li>Pengenalan Pemrograman</li>
-                <li>Pengembangan Web dan Mobile</li>
-                <li>Manajemen Proyek Perangkat Lunak</li>
-              </ul>
-              <h4 class="text-lg font-semibold mb-2">Jadwal</h4>
-              <p class="mb-4">Setiap Senin & Rabu, 18:00 - 20:00</p>
-              <h4 class="text-lg font-semibold mb-2">Tenaga Pelatih</h4>
-              <p class="mb-4">John Doe - Senior Software Engineer di Nokt Tech</p>
-              <h4 class="text-lg font-semibold mb-2">Biaya</h4>
-              <p class="mb-4">Rp 5.000.000,-</p>
-            </div>
-          </div>
-        </div>
+      <?php
+      include_once('../config/conn.php');
 
-        <!-- Program 2 -->
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition">
-          <img
-            src="../public/images/program/program2.jpg"
-            alt="Sistem Informasi Terintegrasi"
-            class="w-full h-48 object-cover" />
-          <div class="p-4">
-            <h3 class="text-xl font-semibold mb-2">Sistem Informasi Terintegrasi</h3>
-            <p class="text-gray-600 mb-4">
-              Pelatihan ini mencakup desain dan implementasi sistem informasi yang dapat meningkatkan efisiensi bisnis Anda.
-            </p>
-            <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 mb-4" onclick="toggleDetails('program2Details')">Lihat Detail</button>
-            <div id="program2Details" class="hidden">
-              <h4 class="text-lg font-semibold mb-2">Kurikulum</h4>
-              <ul class="list-disc pl-5 mb-4">
-                <li>Pemodelan Data</li>
-                <li>Integrasi Sistem</li>
-                <li>Keamanan Sistem Informasi</li>
-              </ul>
-              <h4 class="text-lg font-semibold mb-2">Jadwal</h4>
-              <p class="mb-4">Setiap Selasa & Kamis, 18:00 - 20:00</p>
-              <h4 class="text-lg font-semibold mb-2">Tenaga Pelatih</h4>
-              <p class="mb-4">Jane Smith - IT Consultant di Nokt Tech</p>
-              <h4 class="text-lg font-semibold mb-2">Biaya</h4>
-              <p class="mb-4">Rp 4.500.000,-</p>
-            </div>
-          </div>
-        </div>
+      $sql = "SELECT * FROM program";
+      $result = $conn->query($sql);
 
-        <!-- Program 3 -->
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition">
-          <img
-            src="../public/images/program/program3.jpg"
-            alt="Konsultasi Teknologi"
-            class="w-full h-48 object-cover" />
-          <div class="p-4">
-            <h3 class="text-xl font-semibold mb-2">Konsultasi Teknologi</h3>
-            <p class="text-gray-600 mb-4">
-              Pelajari bagaimana merancang strategi teknologi yang efektif untuk bisnis Anda dengan para ahli kami.
-            </p>
-            <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 mb-4" onclick="toggleDetails('program3Details')">Lihat Detail</button>
-            <div id="program3Details" class="hidden">
-              <h4 class="text-lg font-semibold mb-2">Kurikulum</h4>
-              <ul class="list-disc pl-5 mb-4">
-                <li>Analisis Kebutuhan Teknologi</li>
-                <li>Strategi Implementasi Teknologi</li>
-                <li>Evaluasi dan Pemeliharaan</li>
-              </ul>
-              <h4 class="text-lg font-semibold mb-2">Jadwal</h4>
-              <p class="mb-4">Setiap Jumat, 18:00 - 20:00</p>
-              <h4 class="text-lg font-semibold mb-2">Tenaga Pelatih</h4>
-              <p class="mb-4">Michael Brown - CTO di Nokt Tech</p>
-              <h4 class="text-lg font-semibold mb-2">Biaya</h4>
-              <p class="mb-4">Rp 6.000.000,-</p>
+      if ($result->num_rows > 0) {
+        echo '<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">';
+
+        while ($row = $result->fetch_assoc()) {
+      ?>
+          <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition">
+            <img src="../public/images/program/<?php echo $row['foto']; ?>" alt="<?php echo $row['nama_program']; ?>" class="w-full h-48 object-cover" />
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-2"><?php echo $row['nama_program']; ?></h3>
+              <p class="text-gray-600 mb-4">
+                <?php echo $row['deskripsi']; ?>
+              </p>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 mb-4" onclick="toggleDetails('programDetails<?php echo $row['id_program']; ?>')">Lihat Detail</button>
+              <div id="programDetails<?php echo $row['id_program']; ?>" class="hidden">
+                <h4 class="text-lg font-semibold mb-2">Kurikulum</h4>
+                <ul class="list-disc pl-5 mb-4">
+                  <?php foreach (explode(",", $row['materi']) as $materi) { ?>
+                    <li><?php echo $materi; ?></li>
+                  <?php } ?>
+                </ul>
+                <h4 class="text-lg font-semibold mb-2">Jadwal</h4>
+                <p class="mb-4"><?php echo $row['jadwal']; ?></p>
+                <h4 class="text-lg font-semibold mb-2">Tenaga Pelatih</h4>
+                <p class="mb-4"><?php echo $row['pelatih']; ?></p>
+                <h4 class="text-lg font-semibold mb-2">Biaya</h4>
+                <p class="mb-4">Rp. <?php echo  $row['biaya']; ?></p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+      <?php
+        }
+        echo '</div>';
+      } else {
+        echo '<p class="text-gray-700">Tidak ada program yang tersedia saat ini.</p>';
+      }
+      ?>
     </section>
   </main>
 

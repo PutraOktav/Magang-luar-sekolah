@@ -1,7 +1,10 @@
 <?php
 session_start();
 $isLoggedIn = isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'];
+
+// include_once('../../config/conn.php');
 ?>
+
 
 <head>
     <meta charset="UTF-8">

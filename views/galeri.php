@@ -13,8 +13,39 @@
         <h1 class="text-4xl font-bold text-center mb-10 text-white ">Galeri</h1>
 
         <!-- Video Galeri -->
+
+        <?php
+        include_once('../config/conn.php');
+
+        $sql = "SELECT * FROM galeri";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            echo '<section class="mb-16">';
+            echo '<div class="relative slideshow-container">';
+
+            $counter = 0;
+
+            while ($row = $result->fetch_assoc()) {
+                $counter++; // Counter untuk membuat setiap slide unik
+
+                // Membuat div untuk setiap gambar
+                echo '<div class="myPhotoSlides fade" style="display: ' . ($counter === 1 ? 'block' : 'none') . ';">';
+                echo '<img src="../public/images/photo/' . $row['nama_gambar'] . '" alt="' . $row['nama_gambar'] . '" class="w-full h-64 object-cover rounded-lg shadow-lg">';
+                echo '</div>';
+            }
+
+            echo '<a class="prev absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-700 text-white px-4 py-2 cursor-pointer" onclick="plusSlides(-1)">&#10094;</a>';
+            echo '<a class="next absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-700 text-white px-4 py-2 cursor-pointer" onclick="plusSlides(1)">&#10095;</a>';
+
+            echo '</div>';
+            echo '</section>';
+        } else {
+            echo '<p class="text-gray-700">Tidak ada gambar yang tersedia saat ini.</p>';
+        }
+        ?>
+
         <section class="mb-16">
-            <h2 class="text-2xl font-semibold mb-6 text-white">Video</h2>
             <div class="relative">
                 <div class="slideshow-container">
                     <div class="myVideoSlides fade show">
@@ -23,58 +54,40 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class="myVideoSlides fade">
-                        <video class="w-full h-64 object-cover" controls autoplay muted loop>
-                            <source src="../public/videos/video2.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="myVideoSlides fade">
-                        <video class="w-full h-64 object-cover" controls autoplay muted loop>
-                            <source src="../public/videos/video3.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
                 </div>
-                <a class="prev absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-700 text-white px-4 py-2 cursor-pointer" onclick="plusSlides(-1, 'video')">&#10094;</a>
-                <a class="next absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-700 text-white px-4 py-2 cursor-pointer" onclick="plusSlides(1, 'video')">&#10095;</a>
             </div>
         </section>
 
-        <!-- Foto Galeri -->
-        <section class="mb-16">
-            <h2 class="text-2xl font-semibold mb-6 text-white">Foto</h2>
-            <div class="relative">
-                <div class="slideshow-container">
-                    <div class="myPhotoSlides fade show">
-                        <img src="../public/images/photo/photo1.jpg" alt="Kegiatan 1" class="w-full h-64 object-cover">
-                    </div>
-                    <div class="myPhotoSlides fade">
-                        <img src="../public/images/photo/photo2.jpg" alt="Kegiatan 2" class="w-full h-64 object-cover">
-                    </div>
-                    <div class="myPhotoSlides fade">
-                        <img src="../public/images/photo/photo3.jpg" alt="Kegiatan 3" class="w-full h-64 object-cover">
-                    </div>
-                    <div class="myPhotoSlides fade">
-                        <img src="../public/images/photo/photo4.jpg" alt="Kegiatan 4" class="w-full h-64 object-cover">
-                    </div>
-                    <div class="myPhotoSlides fade">
-                        <img src="../public/images/photo/photo5.jpg" alt="Kegiatan 5" class="w-full h-64 object-cover">
-                    </div>
-                    <div class="myPhotoSlides fade">
-                        <img src="../public/images/photo/photo6.jpg" alt="Kegiatan 6" class="w-full h-64 object-cover">
-                    </div>
-                    <div class="myPhotoSlides fade">
-                        <img src="../public/images/photo/photo7.jpg" alt="Kegiatan 7" class="w-full h-64 object-cover">
-                    </div>
-                </div>
-                <a class="prev absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-700 text-white px-4 py-2 cursor-pointer" onclick="plusSlides(-1, 'photo')">&#10094;</a>
-                <a class="next absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-700 text-white px-4 py-2 cursor-pointer" onclick="plusSlides(1, 'photo')">&#10095;</a>
-            </div>
-        </section>
+
+
     </main>
 
     <!-- Include Footer -->
     <?php include_once('../views/layouts/footer.php'); ?>
-    <script src="../public/js/slide.js"></script>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("myPhotoSlides");
+
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
 </body>
