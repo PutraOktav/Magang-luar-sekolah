@@ -1,22 +1,26 @@
 <?php
 session_start();
 
+// Contoh username dan password yang valid (dapat diganti dengan query ke database)
+$valid_username = 'admin';
+$valid_password = 'admin';
+
 // Mendapatkan data dari form
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-// Validasi username dan password
-if ($username === 'admin' && $password === 'admin') {
-    // Set session login
+// Cek apakah username dan password valid
+if ($username === $valid_username && $password === $valid_password) {
+    // Login berhasil, set session
     $_SESSION['isLoggedIn'] = true;
-    
-    // Redirect ke halaman index jika login berhasil
+    $_SESSION['username'] = $username;
+
+    // Redirect ke halaman index
     header('Location: ../index.php');
     exit();
 } else {
-    // Jika username atau password salah, kembali ke halaman login dengan pesan error
-    $_SESSION['error'] = 'Username atau password salah.';
-    header('Location: login.php');
+    // Login gagal, redirect ke login dengan pesan error
+    header('Location: login.php?error=Username atau password salah');
     exit();
 }
 ?>

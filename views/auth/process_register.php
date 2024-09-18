@@ -13,10 +13,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_FILES['fotoDiri']) && $_FILES['fotoDiri']['error'] == 0) {
         $fileTmpPath = $_FILES['fotoDiri']['tmp_name'];
         $fileName = $_FILES['fotoDiri']['name'];
-        
+
         // Tentukan direktori upload
         $uploadDir = __DIR__ . '/uploads/';
-        
+
         // Pastikan folder 'uploads/' ada
         if (!is_dir($uploadDir)) {
             mkdir($uploadDir, 0755, true);

@@ -1,7 +1,7 @@
 # Mengatur index.php sebagai file default
 RewriteEngine On
 RewriteCond %{REQUEST_URI} !^/views/index\.php$
-RewriteRule ^(.*)$ /views/index.php [L]
+RewriteRule ^(.*)$ /views/auth/index.php [L]
 
 
 # php -- BEGIN cPanel-generated handler, do not edit
