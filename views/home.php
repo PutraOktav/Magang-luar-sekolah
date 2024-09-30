@@ -6,7 +6,7 @@
 <body>
 
     <!-- Include Header -->
-    <?php include_once('../views/layouts/header.php'); ?>
+    <?php include('../views/layouts/header.php'); ?>
 
     <!-- Hero Section -->
     <section class="bg-cover bg-center h-screen" style="background-image: url('../public/images/background/bg.jpg');">

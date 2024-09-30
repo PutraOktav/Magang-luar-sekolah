@@ -31,7 +31,9 @@
 
       <!-- Daftar Program Pelatihan -->
       <?php
-      $sql = "SELECT * FROM program";
+      $sql = "SELECT program.*, users.username
+        FROM program
+        JOIN users ON program.id_pelatih = users.id";
       $result = $conn->query($sql);
 
       if ($result->num_rows > 0) {
@@ -57,7 +59,7 @@
                 <h4 class="text-lg font-semibold mb-2">Jadwal</h4>
                 <p class="mb-4"><?php echo $row['jadwal']; ?></p>
                 <h4 class="text-lg font-semibold mb-2">Tenaga Pelatih</h4>
-                <p class="mb-4"><?php echo $row['pelatih']; ?></p>
+                <p class="mb-4">Mr/Mrs. <?php echo $row['username']; ?></p>
                 <h4 class="text-lg font-semibold mb-2">Biaya</h4>
                 <p class="mb-4">Rp. <?php echo  $row['biaya']; ?></p>
               </div>
@@ -79,9 +81,6 @@
   <script src="../public/js/scripts.js"></script>
 
   <script>
-    function toggleDetails(detailsId) {
-      const detailsElement = document.getElementById(detailsId);
-      detailsElement.classList.toggle('hidden');
-    }
+    
   </script>
 </body>

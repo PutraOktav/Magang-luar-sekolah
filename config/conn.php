@@ -1,14 +1,12 @@
 <?php
-
-// Koneksi database
-$host = "localhost";
-$username = "root";
+$servername = "localhost";
+$usernames = "root";
 $password = "";
 $dbname = "db_lembaga_pelatihan";
 
-$conn = new mysqli($host, $username, $password, $dbname);
+$conn = new mysqli($servername, $usernames, $password, $dbname);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+?>

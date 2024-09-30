@@ -112,6 +112,16 @@
     outline: none;
 }
 
+#hideButton {
+    background-color: transparent;
+    border: none;
+    color: transparent;
+    cursor: default;
+    font-size: 0;
+    padding: 0;
+    transition: none;
+}
+
 button {
     background-color: #1d4ed8;
     color: white;

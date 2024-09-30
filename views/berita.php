@@ -44,6 +44,7 @@
                         <!-- Artikel Berita -->
                         <article class="news-item mb-6 p-4 border rounded-lg shadow hover:shadow-lg transition duration-300" data-category="<?php echo $row['judul_berita']; ?>">
                             <h3 class="text-2xl font-semibold mb-2"><?php echo $row['judul_berita']; ?></h3>
+                            <img src="../public/images/berita/<?php echo $row['foto_berita']; ?>" class="rounded-lg w-full h-48 object-cover" alt="Berita">
                             <p class="text-gray-700 mb-2"><?php echo $row['isi_berita']; ?></p>
                             <p class="text-gray-700 hidden news-description" id="desc-<?php echo $row['id_berita']; ?>"><?php echo $row['selengkap']; ?></p>
                             <button class="text-blue-500 underline hover:text-blue-700 transition duration-300" onclick="toggleDetails('desc-<?php echo $row['id_berita']; ?>', this)">Baca selengkapnya</button>

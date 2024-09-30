@@ -1,10 +1,9 @@
 <?php
 session_start();
 $isLoggedIn = isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'];
-
-include_once('../config/conn.php');
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : '';
+include('../config/conn.php');
 ?>
-
 
 <head>
     <meta charset="UTF-8">
@@ -43,6 +42,7 @@ include_once('../config/conn.php');
             <a href="../views/berita.php" class="hover:underline">Berita</a>
             <a href="../views/galeri.php" class="hover:underline">Galeri</a>
             <a href="../views/kontak.php" class="hover:underline">Kontak</a>
+            <a href="../views/data.php" class="hover:underline">Testing Data</a>
         </div>
 
         <!-- Search Box -->
@@ -59,8 +59,8 @@ include_once('../config/conn.php');
         <!-- Authentication Links -->
         <div id="authLinks" class="space-x-4">
             <?php if ($isLoggedIn): ?>
-                <span class="mr-2">Halo, Admin</span>
-                <a href="../views/auth/login.php" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-200">Logout</a>
+                <span class="mr-2">Halo, <?php echo ($username); ?></span>
+                <a href="../views/auth/logout.php" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-200">Logout</a>
             <?php else: ?>
                 <a href="../views/auth/login.php" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-200">Login</a>
                 <a href="../views/auth/register.php" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-200">Register</a>
