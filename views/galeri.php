@@ -25,9 +25,8 @@
             $counter = 0;
 
             while ($row = $result->fetch_assoc()) {
-                $counter++; // Counter untuk membuat setiap slide unik
-
-                // Membuat div untuk setiap gambar
+                $counter++; 
+                
                 echo '<div class="myPhotoSlides fade" style="display: ' . ($counter === 1 ? 'block' : 'none') . ';">';
                 echo '<img src="../public/images/photo/' . $row['nama_galeri'] . '" alt="' . $row['nama_galeri'] . '" class="w-full h-64 object-cover rounded-lg shadow-lg">';
                 echo '</div>';
@@ -55,9 +54,8 @@
             $counter = 0;
 
             while ($row2 = $result2->fetch_assoc()) {
-                $counter++; // Counter untuk membuat setiap slide unik
+                $counter++; 
 
-                // Membuat div untuk setiap video
                 echo '<div class="myVideoSlides fade" style="display: ' . ($counter === 1 ? 'block' : 'none') . ';">';
                 echo '<video src="../public/videos/' . $row2['nama_galeri'] . '" alt="' . $row2['nama_galeri'] . '" class="w-full h-64 object-cover" controls autoplay muted loop>';
                 echo '</div>';

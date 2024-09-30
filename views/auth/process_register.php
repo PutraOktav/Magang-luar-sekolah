@@ -1,5 +1,5 @@
 <?php
-require_once '../../../config/conn.php';
+require_once '../../config/conn.php';
 
 // Cek apakah request method adalah POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -47,6 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Persiapkan statement untuk menghindari SQL injection
     $stmt = $conn->prepare($sql);
+    
     $stmt->bind_param("sssssss",  $username, $hashedPassword, $alamat, $no_telp, $email, $foto, $role);
 
     // Eksekusi query
