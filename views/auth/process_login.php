@@ -1,5 +1,5 @@
 <?php
-require_once '../../config/conn.php';
+require_once '../../../config/conn.php';
 session_start(); // Tambahkan session_start() untuk mengaktifkan session
 
 // Cek apakah request method adalah POST

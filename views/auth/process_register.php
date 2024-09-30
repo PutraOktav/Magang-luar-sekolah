@@ -1,5 +1,5 @@
 <?php
-require_once '../../config/conn.php';
+require_once '../../../config/conn.php';
 
 // Cek apakah request method adalah POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

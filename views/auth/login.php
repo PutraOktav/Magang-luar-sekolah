@@ -22,7 +22,7 @@
             <?php endif; ?>
 
             <!-- Form Login -->
-            <form id="loginForm" class="space-y-6" action="process_login.php" method="POST">
+            <form id="loginForm" class="space-y-6" action="process/process_login.php" method="POST">
                 <div>
                     <label for="username" class="block text-gray-600 font-medium">Username</label>
                     <input type="text" id="username" name="username" class="w-full p-3 rounded-lg border border-gray-300 focus:ring focus:ring-blue-200" required>

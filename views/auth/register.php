@@ -14,7 +14,7 @@
     <main>
         <section id="registerSection" class="bg-white p-6 rounded-lg shadow-lg mt-10 register-box">
             <h2 class="text-3xl font-semibold mb-4">Register</h2>
-            <form action="process_register.php" method="POST" enctype="multipart/form-data" class="space-y-6">
+            <form action="process/process_register.php" method="POST" enctype="multipart/form-data" class="space-y-6">
                 <div>
                     <label for="username" class="block text-gray-700">Username</label>
                     <input type="text" id="username" name="username" class="w-full p-3 rounded-lg" required>
