@@ -28,6 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Set session jika login berhasil
             $_SESSION['isLoggedIn'] = true; // Tambahkan ini
             $_SESSION['username'] = $user['username'];
+            $_SESSION['role'] = $user['role'];
             header("Location: ../home.php");
             exit(); // pastikan untuk menghentikan eksekusi setelah pengalihan
         } else {

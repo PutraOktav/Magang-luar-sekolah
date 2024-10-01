@@ -14,8 +14,10 @@
         <!-- Filter Berita dengan Dropdown -->
         <div class="container mx-auto px-4 mb-6">
             <select id="newsFilter" class="w-full p-3 rounded-lg shadow-lg">
+                <!-- Opsi filter berita -->
                 <option value="all">Semua Berita</option>
                 <?php
+                // Query untuk mendapatkan judul berita
                 $sql = "SELECT judul_berita FROM berita";
                 $category = $conn->query($sql);
 
@@ -33,12 +35,13 @@
                 <h2 class="text-3xl font-semibold mb-4 text-gray-800">Berita Terkini</h2>
 
                 <?php
+                // Query untuk mendapatkan berita terbaru
                 $sql2 = "SELECT * FROM berita";
                 $result = $conn->query($sql2);
 
                 if ($result->num_rows > 0) {
                     echo '<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="newsContainer">';
-
+                    
                     while ($row = $result->fetch_assoc()) {
                 ?>
                         <!-- Artikel Berita -->

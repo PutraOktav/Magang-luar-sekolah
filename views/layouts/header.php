@@ -2,6 +2,8 @@
 session_start();
 $isLoggedIn = isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'];
 $username = isset($_SESSION['username']) ? $_SESSION['username'] : '';
+$role = isset($_SESSION['role']) ? $_SESSION['role'] : null; // Pastikan ada role di session
+
 include('../config/conn.php');
 ?>
 
@@ -42,7 +44,11 @@ include('../config/conn.php');
             <a href="../views/berita.php" class="hover:underline">Berita</a>
             <a href="../views/galeri.php" class="hover:underline">Galeri</a>
             <a href="../views/kontak.php" class="hover:underline">Kontak</a>
-            <a href="../views/data.php" class="hover:underline">Testing Data</a>
+
+            <!-- Menampilkan Testing Data hanya jika role adalah 1 (Admin) -->
+            <?php if ($isLoggedIn && $role == 1): ?>
+                <a href="../views/crud.php" class="hover:underline">Manage Data</a>
+            <?php endif; ?>
         </div>
 
         <!-- Search Box -->

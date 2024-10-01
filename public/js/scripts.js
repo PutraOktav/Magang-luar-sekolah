@@ -1,3 +1,6 @@
+/**
+ * Toggle password visibility
+ */
 function togglePasswordVisibility() {
   const passwordInput = document.getElementById("password");
   const type = passwordInput.type === "password" ? "text" : "password";
@@ -7,6 +10,11 @@ function togglePasswordVisibility() {
     type === "password" ? "Lihat Password" : "Sembunyikan Password";
 }
 
+/**
+ * Toggle details of a news item
+ * @param {string} id ID of the news item
+ * @param {HTMLElement} button Button to toggle the details
+ */
 function toggleDetails(id, button) {
   var description = document.getElementById(id);
   if (
@@ -21,6 +29,9 @@ function toggleDetails(id, button) {
   }
 }
 
+/**
+ * Filter news items based on category
+ */
 document.getElementById("newsFilter").addEventListener("change", function () {
   var filterValue = this.value;
   var newsItems = document.querySelectorAll(".news-item");

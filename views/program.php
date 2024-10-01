@@ -16,6 +16,7 @@
       <div class="bg-gray-100 p-6 rounded-lg shadow-lg mb-6">
         <h2 class="text-3xl font-semibold mb-4">Tentang Program Kami</h2>
         <p class="text-gray-700 mb-4">
+          <!-- Deskripsi tentang program pelatihan -->
           Nokt Tech menyediakan berbagai program pelatihan teknologi yang
           dirancang untuk membantu Anda mengembangkan keterampilan dan
           pengetahuan dalam bidang teknologi terbaru. Program kami mencakup
@@ -23,6 +24,7 @@
           dan banyak lagi.
         </p>
         <p class="text-gray-700">
+          <!-- Deskripsi tentang program pelatihan -->
           Setiap program dirancang oleh para ahli di bidangnya dan mencakup
           kurikulum yang komprehensif untuk memastikan Anda mendapatkan
           pengetahuan dan keterampilan yang diperlukan untuk sukses di industri teknologi.
@@ -46,10 +48,11 @@
             <div class="p-4">
               <h3 class="text-xl font-semibold mb-2"><?php echo $row['nama_program']; ?></h3>
               <p class="text-gray-600 mb-4">
+                <!-- Deskripsi program -->
                 <?php echo $row['deskripsi']; ?>
               </p>
-              <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 mb-4" onclick="toggleDetails('programDetails<?php echo $row['id_program']; ?>')">Lihat Detail</button>
-              <div id="programDetails<?php echo $row['id_program']; ?>" class="hidden">
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 mb-4" onclick="toggleDetails('programDetails<?php echo $row['id']; ?>')">Lihat Detail</button>
+              <div id="programDetails<?php echo $row['id']; ?>" class="hidden">
                 <h4 class="text-lg font-semibold mb-2">Kurikulum</h4>
                 <ul class="list-disc pl-5 mb-4">
                   <?php foreach (explode(",", $row['materi']) as $materi) { ?>
@@ -61,7 +64,7 @@
                 <h4 class="text-lg font-semibold mb-2">Tenaga Pelatih</h4>
                 <p class="mb-4">Mr/Mrs. <?php echo $row['username']; ?></p>
                 <h4 class="text-lg font-semibold mb-2">Biaya</h4>
-                <p class="mb-4">Rp. <?php echo  $row['biaya']; ?></p>
+                <p class="mb-4">Rp. <?php echo  number_format($row['biaya'], 0, ',', '.'); ?></p>
               </div>
             </div>
           </div>
@@ -81,6 +84,19 @@
   <script src="../public/js/scripts.js"></script>
 
   <script>
-    
+
+    /**
+     * Fungsi untuk menampilkan atau menyembunyikan detail program
+     * @param {string} id - ID dari program yang ingin ditampilkan atau disembunyikan
+     */
+    function toggleDetails(id) {
+      const element = document.getElementById(id);
+      if (element.classList.contains('hidden')) {
+        element.classList.remove('hidden');
+      } else {
+        element.classList.add('hidden');
+      }
+    }
+
   </script>
 </body>
