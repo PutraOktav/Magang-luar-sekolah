@@ -3,6 +3,22 @@ Project Magang Luar Sekolah (PBI) <br>
 Hosting ( https://magang.nokt.tech ) <br>
 nokt.tech ( https://github.com/PutraOktav )
 
+# Demo 
+# Admin
+| Username | Password |
+|----------|----------|
+| admin    | admin1234 |
+
+# Pelatih
+| Username | Password |
+|----------|----------|
+| pelatih  | pelatih123 |
+
+# Peserta
+| Username | Password |
+|----------|----------|
+| peserta  | peserta123 |
+
 # Project Name
 
 Welcome to the Project Name repository! This project is structured into different weeks, each focusing on a specific aspect of web development. Below you'll find details about each week's focus and the technologies used.

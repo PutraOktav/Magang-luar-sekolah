@@ -16,7 +16,7 @@
 
 
 -- Membuang struktur basisdata untuk db_lembaga_pelatihan
-CREATE DATABASE IF NOT EXISTS `db_lembaga_pelatihan` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE IF NOT EXISTS `db_lembaga_pelatihan` /*!40100 DEFAULT CHARACTER SET utf16 COLLATE utf16_bin */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `db_lembaga_pelatihan`;
 
 -- membuang struktur untuk table db_lembaga_pelatihan.agenda
@@ -189,7 +189,7 @@ INSERT INTO `users` (`id`, `username`, `password`, `alamat`, `no_telp`, `email`,
 	(3, 'Pelatih3', '90da9876474dc0f3783baa0d3bc79fcfbb660dee7bdbfdfac193a07e813a2d33', 'Jl. No.3', '0833333', 'putra@nokt.tech', 'putra.jpg', '2'),
 	(5, 'Peserta1', 'b1d0478adc310cdc9ee7ed33b201677e5fd3cd3d10eb10e5086472b2248f00c5', 'Jl. No.5', '0855555', 'ylniw@nokt.tech', 'ylniw.jpg', '3'),
 	(6, 'Peserta2', 'b1d0478adc310cdc9ee7ed33b201677e5fd3cd3d10eb10e5086472b2248f00c5', 'Jl. No.6', '0866666', 'artup@nokt.tech', 'artup.jpg', '3'),
-	(18, 'admin', '$2y$10$9yjvRoEdDUMD55L/6K0n6ehNiGm7F2Eci1tUCyguEpjMfhQEB4GGW', 'Jl. admin', '32', 'admin@gmail.com', './uploads/Logo PT. Indocyber Global Teknologi.jpg', '1');
+	(18, 'admin', '$2y$10$9yjvRoEdDUMD55L/6K0n6ehNiGm7F2Eci1tUCyguEpjMfhQEB4GGW', 'admin', '32', 'admin@gmail.com', './uploads/Logo PT. Indocyber Global Teknologi.jpg', '1');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
