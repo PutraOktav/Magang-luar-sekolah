@@ -14,6 +14,10 @@ Welcome to the Project Name repository! This project is structured into differen
 - [Week 3 - Add JavaScript]
 - [Week 4 - Make Web Lembaga Sederhana]
 - [Week 5 - Add PHP] [ Logout Button Belum Jadi ]
+- [Week 6 - mysql]
+
+
+
 
 ## Detail 
 
@@ -98,3 +102,54 @@ Welcome to the Project Name repository! This project is structured into differen
     9.  Upload ke Google Drive masing-masing dan masukkan link tugas pada magang+
     Tools:
     Text Editor (Visual Studio Code, Sublime Text, Notepad, dll)
+
+-  [Week 6]
+    Detail Tugas:
+    1. Buatlah database MySQL untuk website lembaga pelatihan dengan nama db_lembaga_pelatihan yang dapat menyimpan data peserta, tenaga pelatih, program pelatihan, nilai, berita, agenda
+    2. Buatlah tabel user
+        id (INT, PRIMARY KEY, AUTO_INCREMENT)
+        nama (VARCHAR(255))
+        alamat (TEXT)
+        no_telp (VARCHAR(15))
+        email (VARCHAR(255))
+        foto (VARCHAR(255))
+        role (ENUM ('1', '2', '3')) // 1:admin, 2:peserta, 3:tenaga pelatih
+    2. Buatlah tabel program
+        id_program (INT, PRIMARY KEY, AUTO_INCREMENT)
+        nama_program (VARCHAR(255))
+        deskripsi (TEXT)
+        jadwal (TEXT)
+        biaya (INT)
+        materi (TEXT)
+    3. Buatlah tabel nilai
+        id_nilai (INT, PRIMARY KEY, AUTO_INCREMENT)
+        id_peserta (INT)
+        id_program (INT)
+        nilai_ujian (INT)
+        nilai_tugas (INT)
+    4. Buatlah tabel berita
+        id_berita (INT, PRIMARY KEY, AUTO_INCREMENT)
+        judul_berita (VARCHAR(255))
+        isi_berita (TEXT)
+        tanggal_publikasi (DATE)
+        foto_berita (VARCHAR(255))
+    5. Buatlah tabel agenda
+        id_agenda (INT, PRIMARY KEY, AUTO_INCREMENT)
+        judul_agenda (VARCHAR(255))
+        tanggal_agenda (DATE)
+        waktu_agenda (TIME)
+        lokasi_agenda (VARCHAR(255))
+    6. Buatlah hubungan antar tabel dengan foreign key.
+    7. Masukkan beberapa data contoh ke dalam setiap tabel.
+    8. Buatlah beberapa query SQL untuk:
+        Menampilkan daftar peserta beserta program pelatihannya.
+        Menampilkan daftar pelatih beserta program pelatihan yang diajar.
+        Menampilkan nilai rata-rata setiap peserta.
+        Menampilkan pengumuman terbaru.
+        Menampilkan berita berdasarkan kategori.
+        Menampilkan agenda yang akan datang.
+    9. Simpan tugas degan nama BATCH4_WEB_DEVELOPER_TM6_NAMA.zip dengan isi (db_lembaga_pelatihan.sql & query.docs)
+    10. Upload ke Google Drive masing-masing dan masukkan link tugas pada Magang
+        Tools:
+        MySQL
+
