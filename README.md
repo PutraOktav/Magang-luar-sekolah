@@ -9,10 +9,10 @@ Welcome to the Project Name repository! This project is structured into differen
 
 ## Table of Contents
 
-- [Week 1 - HTML]
-- [Week 2 - Add CSS]
-- [Week 3 - Add JavaScript]
-- [Week 4 - Make Web Lembaga Sederhana]
+- [Week 1 - HTML] https://github.com/PutraOktav/Magang-luar-sekolah
+- [Week 2 - CSS] https://github.com/PutraOktav/Magang-luar-sekolah/tree/Week-2
+- [Week 3 - JavaScript] https://github.com/PutraOktav/Magang-luar-sekolah/tree/Week-3
+- [Week 4 - Web Lembaga Sederhana] https://github.com/PutraOktav/Magang-luar-sekolah/tree/Week-4
 
 
 
