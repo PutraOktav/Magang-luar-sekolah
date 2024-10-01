@@ -1,3 +1,4 @@
+<!-- admin/load_table.php -->
 <?php
 include_once('../../config/conn.php');
 
@@ -12,28 +13,28 @@ if (!in_array($table, $allowed_tables)) {
 
 switch ($table) {
     case 'users':
-        $sql = "SELECT id, username, email FROM users";
+        $sql = "SELECT id, username as 'Username', email as 'Email' FROM users WHERE role != 1";
         break;
     case 'program':
-        $sql = "SELECT id, nama_program, jadwal FROM program";
+        $sql = "SELECT id, nama_program as 'Program', jadwal as 'Jadwal' FROM program";
         break;
     case 'agenda':
-        $sql = "SELECT id, judul_agenda, tanggal_agenda, lokasi_agenda FROM agenda";
+        $sql = "SELECT id, judul_agenda as 'Agenda', tanggal_agenda as 'Tanggal', lokasi_agenda as 'Lokasi' FROM agenda";
         break;
     case 'berita':
-        $sql = "SELECT id, judul_berita, tanggal_publikasi FROM berita";
+        $sql = "SELECT id, judul_berita as 'Judul', tanggal_publikasi as 'Publikasi' FROM berita";
         break;
     case 'galeri':
-        $sql = "SELECT id, nama_galeri, category FROM galeri";
+        $sql = "SELECT id, nama_galeri as 'Galeri', category as 'Kategori' FROM galeri";
         break;
     case 'karir':
-        $sql = "SELECT id, nama_karir FROM karir";
+        $sql = "SELECT id, nama_karir as 'Karir' FROM karir";
         break;
     case 'pelatih':
-        $sql = "SELECT id, username, email FROM users WHERE role = 2";
+        $sql = "SELECT id, username as 'Username', email as 'Email' FROM users WHERE role = 2";
         break;
     case 'peserta':
-        $sql = "SELECT id, username, email FROM users WHERE role = 3";
+        $sql = "SELECT id, username as 'Username', email as 'Email' FROM users WHERE role = 3";
         break;
 }
 

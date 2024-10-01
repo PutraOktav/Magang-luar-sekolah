@@ -1,3 +1,4 @@
+<!-- admin/get_coloumn.php -->
 <?php
 include_once('../../config/conn.php'); // Include your database connection
 

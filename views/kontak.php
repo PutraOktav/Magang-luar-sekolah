@@ -1,3 +1,4 @@
+<!-- kontak.php -->
 <head>
     <title>Kontak - Nokt Tech</title>
     <link rel="shortcut icon" href="../public/images/logo/logo.png" type="image/x-icon">

@@ -1,3 +1,4 @@
+<!-- galeri.php -->
 <head>
     <title>Berita - Nokt Tech</title>
     <link rel="shortcut icon" href="../public/images/logo/logo.png" type="image/x-icon">

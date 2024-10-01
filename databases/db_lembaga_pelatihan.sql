@@ -180,17 +180,16 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`),
   KEY `user_role_fk` (`role`),
   CONSTRAINT `user_role_fk` FOREIGN KEY (`role`) REFERENCES `roles` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Membuang data untuk tabel db_lembaga_pelatihan.users: ~8 rows (lebih kurang)
 INSERT INTO `users` (`id`, `username`, `password`, `alamat`, `no_telp`, `email`, `foto`, `role`) VALUES
-	(1, 'Oktavv', '90da9876474dc0f3783baa0d3bc79fcfbb660dee7bdbfdfac193a07e813a2d33', 'Jl.  No.1', '0811111', 'oktav@nokt.tech', 'oktav.jpeg', '2'),
-	(2, 'Winly', '90da9876474dc0f3783baa0d3bc79fcfbb660dee7bdbfdfac193a07e813a2d33', 'Jl. No.2', '0822222', 'winly@nokt.tech', 'winly.jpg', '2'),
-	(3, 'Putra', '90da9876474dc0f3783baa0d3bc79fcfbb660dee7bdbfdfac193a07e813a2d33', 'Jl. No.3', '0833333', 'putra@nokt.tech', 'putra.jpg', '2'),
-	(4, 'Vatko', '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9', 'Jl. No.4', '0844444', 'vatko@nokt.tech', 'vatko.jpeg', '1'),
-	(5, 'Ylniw', 'b1d0478adc310cdc9ee7ed33b201677e5fd3cd3d10eb10e5086472b2248f00c5', 'Jl. No.5', '0855555', 'ylniw@nokt.tech', 'ylniw.jpg', '3'),
-	(6, 'Artup', 'b1d0478adc310cdc9ee7ed33b201677e5fd3cd3d10eb10e5086472b2248f00c5', 'Jl. No.6', '0866666', 'artup@nokt.tech', 'artup.jpg', '3'),
-	(17, 'admin', '$2y$10$KIjaJypzsfgR3Hk15OtqOeEeF0r5fMFEWd0Zw0xN.s75grKAaV1fW', 'admin', '123', 'admin@gmail.com', './uploads/wallpaperflare.com_wallpaper.jpg', '1');
+	(1, 'Pelatih1', '90da9876474dc0f3783baa0d3bc79fcfbb660dee7bdbfdfac193a07e813a2d33', 'Jl. No.1', '081111144', 'oktav@nokt.tech', 'oktav.jpeg', '2'),
+	(2, 'Pelatih2', '90da9876474dc0f3783baa0d3bc79fcfbb660dee7bdbfdfac193a07e813a2d33', 'Jl. No.2', '0822222', 'winly@nokt.tech', 'winly.jpg', '2'),
+	(3, 'Pelatih3', '90da9876474dc0f3783baa0d3bc79fcfbb660dee7bdbfdfac193a07e813a2d33', 'Jl. No.3', '0833333', 'putra@nokt.tech', 'putra.jpg', '2'),
+	(5, 'Peserta1', 'b1d0478adc310cdc9ee7ed33b201677e5fd3cd3d10eb10e5086472b2248f00c5', 'Jl. No.5', '0855555', 'ylniw@nokt.tech', 'ylniw.jpg', '3'),
+	(6, 'Peserta2', 'b1d0478adc310cdc9ee7ed33b201677e5fd3cd3d10eb10e5086472b2248f00c5', 'Jl. No.6', '0866666', 'artup@nokt.tech', 'artup.jpg', '3'),
+	(18, 'admin', '$2y$10$9yjvRoEdDUMD55L/6K0n6ehNiGm7F2Eci1tUCyguEpjMfhQEB4GGW', 'Jl. admin', '32', 'admin@gmail.com', './uploads/Logo PT. Indocyber Global Teknologi.jpg', '1');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

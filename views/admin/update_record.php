@@ -1,3 +1,4 @@
+<!-- admin/update_record.php -->
 <?php
 include_once('../../config/conn.php');
 
@@ -13,6 +14,10 @@ if (!in_array($table, $allowed_tables) || !is_numeric($id)) {
 
 unset($_POST['table']);
 unset($_POST['id']);
+
+if ($table == 'users' && isset($_POST['password'])) {
+    $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
+}
 
 $columns = array_keys($_POST);
 $values = array_values($_POST);
@@ -33,3 +38,4 @@ if ($stmt->execute()) {
 
 $stmt->close();
 $conn->close();
+

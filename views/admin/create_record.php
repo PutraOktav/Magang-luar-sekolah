@@ -1,3 +1,4 @@
+<!-- admin/create_record.php -->
 <?php
 include_once('../../config/conn.php'); // Include your database connection
 
@@ -12,6 +13,11 @@ if (!in_array($table, $allowed_tables)) {
 }
 
 unset($_POST['table']); // Remove 'table' from the form data
+
+if ($table == 'users') {
+    $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
+}
+
 
 $columns = array_keys($_POST);
 $values = array_values($_POST);

@@ -1,3 +1,4 @@
+<!-- auh/logout.php -->
 <?php
 session_start(); // Mulai session
 session_unset(); // Menghapus semua session

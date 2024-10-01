@@ -1,3 +1,4 @@
+<!-- layouts/header.php -->
 <?php
 session_start();
 $isLoggedIn = isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'];

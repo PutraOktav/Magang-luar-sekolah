@@ -1,3 +1,4 @@
+<!-- auth/process_register.php -->
 <?php
 require_once '../../config/conn.php';
 

@@ -1,3 +1,4 @@
+<!-- profil.php -->
 <head>
   <title>Profil - Nokt Tech</title>
   <link rel="shortcut icon" href="../public/images/logo/logo.png" type="image/x-icon">

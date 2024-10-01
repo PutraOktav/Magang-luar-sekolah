@@ -1,4 +1,5 @@
-  <head>
+<!-- informasi.php -->
+<head>
       <title>Informasi - Nokt Tech</title>
       <link rel="shortcut icon" href="../public/images/logo/logo.png" type="image/x-icon">
   </head>

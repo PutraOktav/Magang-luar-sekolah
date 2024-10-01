@@ -1,3 +1,4 @@
+<!-- layouts/footer.php -->
 <footer class="bg-gradient-to-r from-black via-[#1e3a8a] to-[#2563eb] text-white p-4 fixed bottom-0 w-full">
     <div class="container mx-auto text-center">
         <div class="flex items-center justify-center space-x-4">

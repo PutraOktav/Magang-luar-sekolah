@@ -1,3 +1,4 @@
+<!-- admin/delete_record.php -->
 <?php
 include_once('../../config/conn.php'); // Include your database connection
 
