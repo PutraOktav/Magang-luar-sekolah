@@ -3,21 +3,14 @@ Project Magang Luar Sekolah (PBI) <br>
 Hosting ( https://magang.nokt.tech ) <br>
 nokt.tech ( https://github.com/PutraOktav )
 
-# Demo 
-# Admin
-| Username | Password |
-|----------|----------|
-| admin    | admin1234 |
+# Demo
+# User Demo
 
-# Pelatih
-| Username | Password |
-|----------|----------|
-| pelatih  | pelatih123 |
-
-# Peserta
-| Username | Password |
-|----------|----------|
-| peserta  | peserta123 |
+| Role      | Username | Password   |
+|-----------|----------|------------|
+| Admin     | admin    | admin1234  |
+| Pelatih   | pelatih  | pelatih123 |
+| Peserta   | peserta  | peserta123 |
 
 # Project Name
 
