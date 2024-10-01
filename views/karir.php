@@ -31,7 +31,7 @@
                             <h3 class="text-2xl font-semibold mb-2"><?php echo $row['nama_karir']; ?></h3>
                             <p class="text-gray-700 mb-2"><?php echo $row['deskripsi_karir']; ?></p>
                             <p class="text-gray-700 hidden job-description" id="desc-<?php echo $row['id']; ?>"><?php echo $row['selengkapnya']; ?></p>
-                            <button class="text-blue-500 underline hover:text-blue-700 transition duration-300 self-end" onclick="toggleDetails('desc-<?php echo $row['id_karir']; ?>', this)">Baca selengkapnya</button>
+                            <button class="text-blue-500 underline hover:text-blue-700 transition duration-300 self-end" onclick="toggleDetails('desc-<?php echo $row['id']; ?>', this)">Baca selengkapnya</button>
                         </article>
                 <?php
                     }
