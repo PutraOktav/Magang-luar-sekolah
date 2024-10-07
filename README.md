@@ -25,7 +25,8 @@ Welcome to the Project Name repository! This project is structured into differen
 - [Week 5 - Add PHP] [ Logout Button Belum Jadi ] https://github.com/PutraOktav/Magang-luar-sekolah/tree/Week-5
 - [Week 6 - mysql] https://github.com/PutraOktav/Magang-luar-sekolah/tree/Week-6
 - [Week 7 - Integrasi] https://github.com/PutraOktav/Magang-luar-sekolah/tree/Week-7
-- [Week 8 - Crud Dan 2 Interface] https://github.com/PutraOktav/Magang-luar-sekolah/tree/Week-8
+- [Week 8 - Versi 1] https://github.com/PutraOktav/Magang-luar-sekolah/tree/Week-8
+- [Week 8 - Versi 2] https://github.com/PutraOktav/Magang-luar-sekolah/tree/Week-8-V2
 
 
 
