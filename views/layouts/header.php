@@ -48,7 +48,7 @@ include('../config/conn.php');
 
             <!-- Menampilkan Testing Data hanya jika role adalah 1 (Admin) -->
             <?php if ($isLoggedIn && $role == 1): ?>
-                <a href="../views/crud.php" class="hover:underline">Manage Data</a>
+                <a href="../views/index.php" class="hover:underline">Manage Data</a>
             <?php endif; ?>
         </div>
 
