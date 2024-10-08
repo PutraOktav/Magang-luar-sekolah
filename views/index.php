@@ -5,7 +5,6 @@
     <div class="container mx-auto mb-8 px-4">
         <!-- Table selection -->
         <div class="mb-4">
-            <label for="table-select" class="block text-sm font-medium text-gray-700">Select Table:</label>
             <select id="table-select" onchange="window.location.href='?table=' + this.value"
                 class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                 <?php foreach ($tables as $table): ?>
@@ -17,7 +16,6 @@
         </div>
 
         <!-- Create form -->
-        <h2 class="text-2xl font-bold mt-8 mb-4">Create New Record</h2>
         <form method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             <input type="hidden" name="action" value="create">
             <?php foreach ($columns as $column): ?>
@@ -40,7 +38,6 @@
         </form>
 
         <!-- Data table -->
-        <h2 class="text-2xl font-bold mt-8 mb-4">Records</h2>
         <div class="overflow-x-auto">
             <table class="min-w-full bg-white sm">
                 <thead>
